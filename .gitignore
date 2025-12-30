@@ -243,3 +243,5 @@ api-docs/
 # Archivos de debug
 debug.log
 *.debug
+
+CHANGELOG_INTERNAL.md
