@@ -1,8 +1,15 @@
+import featureAbility from '@ohos.ability.featureAbility';
+
 export default {
     data: {
-        title: ''
+        distance: '---'
     },
     onInit() {
-        this.title = this.$t('strings.world');
+        this.subscribeToMessages();
+    },
+    subscribeToMessages() {
+        // Mock implementation for receiving messages from phone
+        // In a real scenario, this would use the Wear Engine or similar API
+        console.info('Subscribing to messages...');
     }
 };

@@ -1,5 +1,8 @@
 <div class="container">
     <text class="title">
-        {{ $t('strings.hello') }} {{ title }}
+        Distancia al bus:
+    </text>
+    <text class="distance">
+        {{ distance }} metros
     </text>
 </div>
