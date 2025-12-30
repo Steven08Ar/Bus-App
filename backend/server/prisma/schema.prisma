@@ -18,10 +18,30 @@ model Estudiante {
 model Bus {
   id                  Int      @id @default(autoincrement())
   placa               String   @unique
+  routeId             String?  // Route identifier for room segmentation
   lat                 Float
   lng                 Float
   ultimaActualizacion DateTime @default(now())
   viajes              Viaje[]
+  logsIngreso         LogsIngreso[]
+}
+
+model Parada {
+  id     Int    @id @default(autoincrement())
+  nombre String
+  lat    Float
+  lng    Float
+}
+
+model LogsIngreso {
+  id           Int      @id @default(autoincrement())
+  estudianteId Int?     // Optional connection to registered student
+  busId        Int
+  bus          Bus      @relation(fields: [busId], references: [id])
+  codigo       String   // Code sent in the request
+  fecha        DateTime @default(now())
+  exitoso      Boolean
+  mensaje      String
 }
 
 model Viaje {
