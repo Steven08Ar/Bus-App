@@ -240,9 +240,6 @@ api-docs/
 # yarn.lock
 # pnpm-lock.yaml
 
-# Watches (si son archivos temporales)
-watches/
-
 # Archivos de debug
 debug.log
 *.debug
